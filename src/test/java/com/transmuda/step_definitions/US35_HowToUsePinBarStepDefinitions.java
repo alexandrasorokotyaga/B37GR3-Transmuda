@@ -3,15 +3,21 @@ package com.transmuda.step_definitions;
 import com.transmuda.pages.BasePage;
 import com.transmuda.pages.LoginPage;
 import com.transmuda.pages.MainPageOptions;
+import com.transmuda.utilities.BrowserUtils;
+import com.transmuda.utilities.Driver;
 import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
+import org.openqa.selenium.WebDriver;
+import org.openqa.selenium.interactions.Actions;
 
 public class US35_HowToUsePinBarStepDefinitions {
 
     LoginPage loginPage = new LoginPage();
     MainPageOptions mainPageOptions = new MainPageOptions();
+    Actions actions = new Actions(Driver.getDriver());
+
 
     @When("user enters truck driver username")
     public void user_enters_truck_driver_username() {
@@ -28,15 +34,6 @@ public class US35_HowToUsePinBarStepDefinitions {
         loginPage.submit.click();
     }
 
-    @Then("user clicks options button")
-    public void user_clicks_options_button() {
-        mainPageOptions.optionsButton.click();
-    }
-
-    @Then("user clicks how to use pin bar")
-    public void user_clicks_how_to_use_pin_bar() {
-        mainPageOptions.howToUsePinBar.click();
-    }
 
     @When("user enters Store Manager username")
     public void userEntersStoreManagerUsername() {
@@ -48,12 +45,6 @@ public class US35_HowToUsePinBarStepDefinitions {
         loginPage.password.sendKeys("UserUser123");
     }
 
-    @Then("user should see how to use pinbar")
-    public void userShouldSeeHowToUsePinbarText() {
-        //Assert.assertTrue(mainPageOptions.howToUsePinBarText.isDisplayed());
-        String expectedText = "How To Use Pinbar";
-        Assert.assertEquals(expectedText, mainPageOptions.howToUsePinBarText.getText());
-    }
 
     @When("user enters Sales Manager username")
     public void userEntersSalesManagerUsername() {
@@ -74,5 +65,29 @@ public class US35_HowToUsePinBarStepDefinitions {
     @And("user enters correct password {string}")
     public void userEntersCorrectPassword(String password) {
         loginPage.password.sendKeys(password);
+
+    }
+
+
+    @Then("user clicks {string}")
+    public void userClicks(String arg0) {
+        mainPageOptions.learnButton.click();
+    }
+
+
+    @And("user sees {string}")
+    public void userSees(String howToMessage) {
+        Assert.assertEquals(howToMessage, mainPageOptions.howToUsePinBarText.getText());
+    }
+
+    @And("user sees description {string}")
+    public void userSeesDescription(String description) {
+        Assert.assertEquals(description, mainPageOptions.usePinDescription.getText());
+    }
+
+    @Then("user should see an image on the page")
+    public void userShouldSeeAnImageOnThePage() {
+        String expectedImageSource = "/bundles/oronavigation/images/pinbar-location.jpg";
+        Assert.assertTrue(mainPageOptions.imageSource.getText().contains(expectedImageSource));
     }
 }

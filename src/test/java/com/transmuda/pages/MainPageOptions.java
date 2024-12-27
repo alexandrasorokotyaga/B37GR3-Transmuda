@@ -14,10 +14,18 @@ public class MainPageOptions {
     @FindBy(xpath = "//i[@class='fa-bars']")
     public WebElement optionsButton;
 
-    @FindBy(xpath = "//a[@href='/pinbar/help']")
-    public WebElement howToUsePinBar;
+    @FindBy(xpath = "//a[.='Learn how to use this space']")
+    public WebElement learnButton;
 
     @FindBy(xpath = "//h3[.='How To Use Pinbar']")
     public WebElement howToUsePinBarText;
 
+    @FindBy(xpath = "//p[1]")
+    public WebElement usePinDescription;
+
+    @FindBy(xpath = "//div/p[1]")
+    public WebElement usePinIcon;
+
+    @FindBy(xpath = "//div/p[2]")
+    public WebElement imageSource;
 }
