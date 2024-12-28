@@ -88,6 +88,7 @@ public class US35_HowToUsePinBarStepDefinitions {
     @Then("user should see an image on the page")
     public void userShouldSeeAnImageOnThePage() {
         String expectedImageSource = "/bundles/oronavigation/images/pinbar-location.jpg";
-        Assert.assertTrue(mainPageOptions.imageSource.getText().contains(expectedImageSource));
+        String actualImageSource = mainPageOptions.imageSource.getAttribute("src");
+        Assert.assertTrue(actualImageSource.contains(expectedImageSource));
     }
 }

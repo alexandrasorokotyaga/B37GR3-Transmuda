@@ -26,6 +26,9 @@ public class MainPageOptions {
     @FindBy(xpath = "//div/p[1]")
     public WebElement usePinIcon;
 
-    @FindBy(xpath = "//div/p[2]")
+//    @FindBy(xpath = "//div/p[2]")
+//    public WebElement imageSource;
+
+    @FindBy(xpath = "//img[@src='/bundles/oronavigation/images/pinbar-location.jpg']")
     public WebElement imageSource;
 }
