@@ -1,3 +1,4 @@
+@vehiclesContracts
 Feature: User is able to access to Vehicle Contracts page
 
   Background: User is already in the log in page
@@ -17,5 +18,6 @@ Feature: User is able to access to Vehicle Contracts page
 
   @US36AC2TC1
   Scenario: user can NOT access to Vehicle Contracts page as driver
-    When hover over fleet tab and click on Vehicle Contracts page
+    Given the user logged in as "driver"
+    When hover over fleet tab and click on Vehicle Contracts page as driver
     Then verify error message is displayed "You do not have permission to perform this action."
