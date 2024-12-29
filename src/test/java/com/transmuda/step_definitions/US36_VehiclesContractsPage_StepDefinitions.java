@@ -1,6 +1,5 @@
 package com.transmuda.step_definitions;
 
-import com.transmuda.pages.VehiclePageBasePage;
 import com.transmuda.pages.VehiclesContractsPage;
 import com.transmuda.utilities.BrowserUtils;
 import com.transmuda.utilities.Driver;
@@ -11,7 +10,6 @@ import org.openqa.selenium.interactions.Actions;
 
 public class US36_VehiclesContractsPage_StepDefinitions {
 
-    VehiclePageBasePage vehiclePageBasePage = new VehiclePageBasePage();
     VehiclesContractsPage vehiclesContractsPage = new VehiclesContractsPage();
     Actions actions = new Actions(Driver.getDriver());
 
