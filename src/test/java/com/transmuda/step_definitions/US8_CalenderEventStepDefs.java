@@ -6,7 +6,7 @@ import io.cucumber.java.en.And;
 import io.cucumber.java.en.Then;
 import org.junit.Assert;
 
-public class US40_CalenderEventStepDefs {
+public class US8_CalenderEventStepDefs {
     CalenderEventPage calenderEventPage = new CalenderEventPage();
 
 
