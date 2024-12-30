@@ -7,7 +7,7 @@ Feature: Users should be able to login
 
   Scenario: US38 Edit car info icon verification as a "driver"
     When the user logged in as "driver"
-    And hover over fleet tab and click on vehicles module
+    And the user hover over fleet and clicks Vehicles
     And hover over edit car info icons
     Then verify edit car info icons are displayed
 
