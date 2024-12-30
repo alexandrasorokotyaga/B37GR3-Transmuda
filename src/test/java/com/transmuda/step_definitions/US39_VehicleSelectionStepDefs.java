@@ -3,13 +3,10 @@ package com.transmuda.step_definitions;
 import com.transmuda.pages.LoginPage;
 import com.transmuda.pages.VehicleSelectionPage;
 import com.transmuda.utilities.BrowserUtils;
-import com.transmuda.utilities.ConfigurationReader;
-import com.transmuda.utilities.Driver;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 
-public class VehicleSelectionStepDefs {
+public class US39_VehicleSelectionStepDefs {
 
 
     public class LoginStepDefs {
@@ -19,10 +16,9 @@ public class VehicleSelectionStepDefs {
 
 
         @When("the user hover over fleet and clicks Vehicles")
-        public void the_sales_manager_is_on_the_vehicles_page() {
+        public void the_user_hover_over_fleet_and_clicks_vehicles()  {
             BrowserUtils.sleep(2);
             BrowserUtils.waitForPageToLoad(5);
-
             BrowserUtils.hover(vehicleSelectionPage.fleetModule);
             BrowserUtils.sleep(2);
             vehicleSelectionPage.vehiclesOption.click();

@@ -11,7 +11,7 @@ public class VehicleSelectionPage {
         PageFactory.initElements(Driver.getDriver(),this);
 
     }
-    @FindBy(xpath = "(//input[@tabindex='-1'])[1]")
+    @FindBy(xpath = "(//input[@tabindex='-1'])[1]") //table/tbody/tr/td[@class='action-cell grid-cell grid-body-cell']
     public WebElement vehicleCheckbox;
 
     @FindBy(xpath = "(//span[@class='title title-level-1'])[2]")
