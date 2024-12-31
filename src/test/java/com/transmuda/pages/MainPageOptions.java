@@ -32,3 +32,4 @@ public class MainPageOptions {
     @FindBy(xpath = "//img[@src='/bundles/oronavigation/images/pinbar-location.jpg']")
     public WebElement imageSource;
 }
+

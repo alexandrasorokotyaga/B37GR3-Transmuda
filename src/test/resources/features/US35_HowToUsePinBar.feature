@@ -52,4 +52,4 @@ Feature: How to use the pinbar
       | user49          | UserUser123 |
       | storemanager59  | UserUser123 |
       | salesmanager259 | UserUser123 |
-
+    
