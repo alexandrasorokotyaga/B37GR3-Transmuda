@@ -91,4 +91,5 @@ public class US35_HowToUsePinBarStepDefinitions {
         String actualImageSource = mainPageOptions.imageSource.getAttribute("src");
         Assert.assertTrue(actualImageSource.contains(expectedImageSource));
     }
+
 }
