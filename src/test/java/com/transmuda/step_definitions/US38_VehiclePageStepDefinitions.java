@@ -26,9 +26,10 @@ public class US38_VehiclePageStepDefinitions {
 
     @When("hover over edit car info icons")
     public void hover_over_edit_car_info_icons() {
-        Actions actions = new Actions(Driver.getDriver());
+        //Actions actions = new Actions(Driver.getDriver());
 
-        actions.moveToElement(vehiclesPage.editCarInfo.get(0)).perform();
+         BrowserUtils.hover(vehiclesPage.editCarInfo.get(1));
+        //actions.moveToElement(vehiclesPage.editCarInfo.get(0)).perform();
     }
 
     @Then("verify edit car info icons are displayed")

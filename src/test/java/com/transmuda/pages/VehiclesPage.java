@@ -14,6 +14,7 @@ public class VehiclesPage {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
+    //@FindBy(xpath = "//table/tbody/tr/td[@data-column-label=\'test\']")
     @FindBy (xpath = "//table/tbody/tr/td[@class='action-cell grid-cell grid-body-cell']")
     public List<WebElement> editCarInfo;
 }
