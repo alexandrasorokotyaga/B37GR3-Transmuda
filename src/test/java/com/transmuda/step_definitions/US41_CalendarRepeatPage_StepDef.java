@@ -32,13 +32,16 @@ public class US41_CalendarRepeatPage_StepDef {
     @And("the user hovers over the Activities button")
     public void theUserHoversOverTheActivitiesButton() {
         actions.moveToElement(calendarRepeatPage.activitiesButton).perform();
+        BrowserUtils.waitFor(5);
     }
 
 
 
     @And("the user clicks on the Calendar Events button")
     public void theUserClicksOnTheCalendarEventsButton() {
+
         calendarRepeatPage.calendarEventsButton.click();
+        BrowserUtils.waitForTitleContains("Calendar Events");
         BrowserUtils.waitFor(2);
     }
 
@@ -75,13 +78,13 @@ public class US41_CalendarRepeatPage_StepDef {
     @When("the user enters {string} into the {string} input box")
     public void theUserEntersIntoTheInputBox(String inputValue, String inputBoxName) {
 
-//        calendarRepeatPage.repeatEveryInputBox.clear();
-//
-//
-//        calendarRepeatPage.repeatEveryInputBox.sendKeys(inputValue);
+        calendarRepeatPage.repeatEveryInputBox.clear();
 
-        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
-        js.executeScript("arguments[0].setAttribute('value', arguments[1]);", calendarRepeatPage.repeatEveryInputBox, inputValue);
+
+        calendarRepeatPage.repeatEveryInputBox.sendKeys(inputValue);
+
+//        JavascriptExecutor js = (JavascriptExecutor) Driver.getDriver();
+//        js.executeScript("arguments[0].setAttribute('value', arguments[1]);", calendarRepeatPage.repeatEveryInputBox, inputValue);
 
     }
 }

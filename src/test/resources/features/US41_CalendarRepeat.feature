@@ -1,4 +1,4 @@
-@US41TC01AC01, @wip
+@US41TC01AC01 @wip
 Feature: Repeat Every input box validation
 
   As a user,
@@ -17,7 +17,7 @@ Feature: Repeat Every input box validation
     Then an error message "<expectedMessage>" should be displayed
 
     Examples:
-      | username        | password     | integer number | inputBoxName   | expectedMessage
-      | user2           | UserUser123  | 0          | Repeat Every   | The value have not to be less than 1.
-      | storemanager53  | UserUser123  | 100        | Repeat Every   | The value have not to be more than 99.
-      | salesmanager123 | UserUser123  | -5         | Repeat Every   | The value have not to be less than 1.
+      | username        | password    | integer number | inputBoxName | expectedMessage                        |
+      | user2           | UserUser123 | 0              | Repeat Every | The value have not to be less than 1.  |
+      | storemanager53  | UserUser123 | 100            | Repeat Every | The value have not to be more than 99. |
+      | salesmanager123 | UserUser123 | -5             | Repeat Every | The value have not to be less than 1.  |

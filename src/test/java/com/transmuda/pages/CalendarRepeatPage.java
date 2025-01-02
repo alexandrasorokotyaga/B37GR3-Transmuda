@@ -30,8 +30,10 @@ public class CalendarRepeatPage {
     public WebElement createCalendarEventsButton;
     @FindBy(xpath = "//div//input[@data-name='recurrence-repeat']")
     public WebElement repeatCheckbox;
-    @FindBy(xpath = "(//input[@class='recurrence-subview-control__number'])[1]")
+    @FindBy(xpath = "(//input[@value='1'])[2]")
     public WebElement repeatEveryInputBox;
+
+
     @FindBy(xpath = "//span[text()='The value have not to be less than 1']")
     public WebElement zeroValueInput;
     @FindBy(xpath = "//span[text()='The value have not to be less than 1']")
