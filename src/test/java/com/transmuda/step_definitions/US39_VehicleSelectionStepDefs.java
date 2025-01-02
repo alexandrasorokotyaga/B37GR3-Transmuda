@@ -8,8 +8,6 @@ import io.cucumber.java.en.When;
 
 public class US39_VehicleSelectionStepDefs {
 
-
-    public class LoginStepDefs {
         LoginPage loginPage = new LoginPage();
         VehicleSelectionPage vehicleSelectionPage = new VehicleSelectionPage();
 
