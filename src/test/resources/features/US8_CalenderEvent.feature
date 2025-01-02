@@ -1,4 +1,4 @@
-@US40
+@wip
 Feature: All the user types should be Create a recurring calendar event
 
 
