@@ -68,4 +68,8 @@ public class US8_CalenderEventStepDefs {
 
 
     }
+
+    @And("the user hovers over the {string} button")
+    public void theUserHoversOverTheButton(String arg0) {
+    }
 }
