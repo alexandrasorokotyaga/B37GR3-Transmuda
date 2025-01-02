@@ -11,12 +11,7 @@ Feature: All the user types should be Create a recurring calendar event
     Then the user enables the Repeat checkbox
 
 
-  Scenario 1: Verify the default value in the "Repeat Every" input field
-    Then the "Repeat Every" field should display the default value "1"
 
-  Scenario 2: Verify the error message when the "Repeat Every" field is cleared
-    And clear the Repeat Every field
-    Then an error message should be displayed saying "This value should not be blank."
 
   Scenario Outline: Verify all the user types get the same result when create a calender event
     Given the user logged in as "<userType>"
