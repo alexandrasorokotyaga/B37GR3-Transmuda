@@ -9,6 +9,7 @@ import io.cucumber.java.en.When;
 public class US39_VehicleSelectionStepDefs {
 
 
+    public class LoginStepDefs {
         LoginPage loginPage = new LoginPage();
         VehicleSelectionPage vehicleSelectionPage = new VehicleSelectionPage();
 
@@ -22,11 +23,17 @@ public class US39_VehicleSelectionStepDefs {
             BrowserUtils.sleep(2);
             vehicleSelectionPage.vehiclesOption.click();
 
+
         }
+
         @Then("the sales manager should able to see all check boxes are unchecked")
         public void the_sales_manager_should_able_to_see_all_check_boxes_are_unchecked() {
 
-
-
         }
     }
+}
+
+
+
+
+
