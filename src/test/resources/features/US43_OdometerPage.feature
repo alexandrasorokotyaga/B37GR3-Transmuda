@@ -18,12 +18,13 @@ Feature: Users should be able to access the Vehicle Odometer page
     And the user click on Vehicle Odometer
     Then the user can view per page accepted result by default
 
-  @Fleet @Odometer
+  @Fleet
   Scenario: Sales Manager should access Vehicle Odometer page and handle errors
     Given the user logged in as "sales manager"
     When the user navigates to the Vehicle Odometer page
     And the user should see an error message for restricted access
 
+@Odometer
 Scenario:Store Manager should access Vehicle Odometer page and handle errors
   Given the user logged in as "store manager"
   When the user navigates to the Vehicle Odometer page
