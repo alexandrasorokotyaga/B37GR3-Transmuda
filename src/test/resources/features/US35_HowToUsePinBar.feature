@@ -1,6 +1,7 @@
 @US35
 Feature: How to use the pinbar
 
+
   User Story:
   As a user, I want to learn how to use the pinbar.
 
