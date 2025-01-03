@@ -1,6 +1,13 @@
-@wip
-Feature: All the user types should be Create a recurring calendar event
 
+@US08
+
+Feature: All the user types should be create a recurring calendar event
+
+  User Story:
+  As a user, I want to learn how to create a calender event.
+
+  Background: User is already in the log in page
+    Given the user is on the login page
 
   Scenario Outline: Verify all the user types get the same result when create a calender event
     Given the user logged in as "<userType>"

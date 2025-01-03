@@ -13,16 +13,19 @@ Feature: As a sales and a store manager user should be able to select any vehicl
       | store manager |
       | sales manager |
 
-
-#  Scenario: All cars selection verification
-#    When user is on the Vehicles page
-#    And user selects first checkbox
-#    Then all the cars are selected
-#
-#  Scenario: Any car selection verification
-#    When user is on the Vehicles page
-#    And user selects any vehicle checkbox
-#    Then selected vehicle checkox is selected
+  @storeManager
+  Scenario: As store manager I should be able to select any vehicle from the Vehicles page
+    Given User logged in as Store Manager
+    Then User should see all the checkboxes as unchecked.
+    Then User should be able to check the first checkbox to select all the cars
+    And User can select any car
 
 
+
+#  @salesManager
+#  Scenario: As sales manager I should be able to select any vehicle from the Vehicles page
+#    Given User logged in as Sales Manager
+#    Then User should see all the checkboxes as unchecked.
+#    Then User should be able to check the first checkbox to select all the cars
+#    And User can select any car
 

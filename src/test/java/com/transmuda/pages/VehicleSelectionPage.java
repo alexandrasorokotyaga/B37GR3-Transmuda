@@ -20,4 +20,11 @@ public class VehicleSelectionPage {
     @FindBy(xpath = "//span[.=\"Vehicles\"]")
     public WebElement vehiclesOption;
 
+    @FindBy(xpath = "(//button[@class='btn btn-default btn-small dropdown-toggle'])/input")
+    public WebElement checkboxAll;
+
+
+    @FindBy(xpath = "(//thead[@class='grid-header'])")
+    public WebElement firstCheckBox;
+
 }
