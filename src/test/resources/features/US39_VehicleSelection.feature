@@ -3,7 +3,7 @@ Feature: As a sales and a store manager user should be able to select any vehicl
 
   Background: For all scenarios user is on the Vehicles page
 
-  @wip
+  @userType
   Scenario Outline: All unchecked boxes verification
     Given the user logged in as "<userType>"
     And hover over fleet tab and click on vehicles module
