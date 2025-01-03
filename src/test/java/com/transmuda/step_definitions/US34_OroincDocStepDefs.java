@@ -38,7 +38,7 @@ public class US34_OroincDocStepDefs {
         System.out.println("actualTitle = " + actualTitle);
     }
 
-    @Then("Verify the Oroinc Documentation page URL and Header")
+    @Then("Verify the Oroinc Documentation page URL and Title")
     public void verify_the_oroinc_documentation_page_url() {
         // Verify the page URL
         String expectedUrl = "https://doc.oroinc.com/";
