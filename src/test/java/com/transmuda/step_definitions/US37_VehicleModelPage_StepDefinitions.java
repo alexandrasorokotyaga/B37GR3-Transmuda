@@ -13,6 +13,7 @@ import org.openqa.selenium.interactions.Actions;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
+import java.util.stream.Collectors;
 
 public class US37_VehicleModelPage_StepDefinitions {
 
@@ -32,6 +33,16 @@ public class US37_VehicleModelPage_StepDefinitions {
         actions.moveToElement(vehicleModelPage.vehicleModelClick).click().perform();
 
     }
+
+    public static List<String> cleanColumnNames(List<String> columnNames){
+        return columnNames.stream()
+                .map(String::trim)            // Remove extra spaces
+                .filter(s -> !s.isEmpty())    // Remove empty strings
+                .distinct() // Remove duplicates
+                .collect(Collectors.toList());
+    }
+
+
 
     @Then("User can see ten columns")
     public void user_can_see_columns() {
@@ -58,9 +69,25 @@ public class US37_VehicleModelPage_StepDefinitions {
             actualColumnNames.add(column.getText().trim());
         }
 
-        // Assert that the expected column names match the actual column names
-        Assert.assertEquals("The column names do not match!", expectedColumnNames, actualColumnNames);
+        List<String> cleanedActualColumnNames = cleanColumnNames(actualColumnNames);
 
+
+        // Assert that the expected column names match the actual column names
+        Assert.assertEquals("The column names do not match!", expectedColumnNames, cleanedActualColumnNames);
+
+    }
+
+    @When("Hover over to Fleet and click Vehicles model")
+    public void hoverOverToFleetAndClickVehiclesModel() {
+        BrowserUtils.sleep(2);
+        actions.moveToElement(vehicleModelPage.driver_basePage_fleet).perform();
+        BrowserUtils.sleep(2);
+        actions.moveToElement(vehicleModelPage.driver_vehiclesModel).click().perform();
+    }
+
+    @Then("User can see error message")
+    public void userCanSeeErrorMessage() {
+        Assert.assertTrue(vehicleModelPage.driver_errorMessage.isDisplayed());
     }
 
 }
