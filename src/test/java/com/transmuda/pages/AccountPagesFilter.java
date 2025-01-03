@@ -6,6 +6,7 @@ import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
 
 import java.security.PublicKey;
+import java.util.List;
 
 public class AccountPagesFilter {
     public AccountPagesFilter() {
@@ -21,8 +22,8 @@ public class AccountPagesFilter {
     @FindBy(xpath = "(//span[normalize-space(text())='Accounts'])[1]")
     public WebElement accountsTitle;
 
-    @FindBy(xpath = "//div[@class='ui-multiselect-menu']//ul/li/label")
-    public WebElement selectItems;
+    @FindBy(xpath = "//div[contains(@class, 'ui-multiselect-menu')]//ul/li//label")
+    public List<WebElement> selectItems;
 
     @FindBy(xpath = "//a[@class='add-filter-button']/span")
     public WebElement manageFilterButton;
