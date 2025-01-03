@@ -1,3 +1,4 @@
+@US35
 Feature: How to use the pinbar
 
   User Story:
@@ -37,7 +38,7 @@ Feature: How to use the pinbar
     And user sees description "Use pin icon on the right top corner of page to create fast access link in the pinbar."
     Then user should see an image on the page
 
-  @DriverStoreAndSalesManager
+  @US35DriverStoreAndSalesManager
   Scenario Outline:How to use the pinbar
     When user enters correct username "<username>"
     And user enters correct password "<password>"
@@ -52,4 +53,4 @@ Feature: How to use the pinbar
       | user49          | UserUser123 |
       | storemanager59  | UserUser123 |
       | salesmanager259 | UserUser123 |
-    
+
