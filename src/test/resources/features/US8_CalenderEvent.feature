@@ -1,8 +1,6 @@
- US8_Ozan
+
 @US08
-======
-@wip08
-master
+
 Feature: All the user types should be create a recurring calendar event
 
   User Story:
