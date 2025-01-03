@@ -1,5 +1,5 @@
 @wip08
-Feature: All the user types should be Create a recurring calendar event
+Feature: All the user types should be create a recurring calendar event
 
   User Story:
   As a user, I want to learn how to create a calender event.
