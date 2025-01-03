@@ -28,14 +28,19 @@ public class US38_VehiclePageStepDefinitions {
     public void hover_over_edit_car_info_icons() {
         //Actions actions = new Actions(Driver.getDriver());
 
-         BrowserUtils.hover(vehiclesPage.editCarInfo.get(1));
+         BrowserUtils.hover(vehiclesPage.editCarInfo.get(0));
         //actions.moveToElement(vehiclesPage.editCarInfo.get(0)).perform();
     }
 
     @Then("verify edit car info icons are displayed")
     public void verify_edit_car_info_icons_are_displayed() {
 
-        Assert.assertTrue(vehiclesPage.editCarInfo.get(0).isDisplayed());
+        Actions actions = new Actions(Driver.getDriver());
+
+        actions.moveToElement(vehiclesPage.editIcon.get(1)).perform();
+
+        Assert.assertTrue(vehiclesPage.editIcon.get(1).isDisplayed());
+
 
     }
 
