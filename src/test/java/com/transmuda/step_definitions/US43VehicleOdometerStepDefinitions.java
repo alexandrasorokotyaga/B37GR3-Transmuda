@@ -3,12 +3,11 @@ package com.transmuda.step_definitions;
 import com.transmuda.pages.VehicleOdometerPage;
 import com.transmuda.pages.VehiclePageBasePage;
 import io.cucumber.java.en.And;
-import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
 import io.cucumber.java.en.When;
 import org.junit.Assert;
 
-public class VehicleOdometerStepDefinitions {
+public class US43VehicleOdometerStepDefinitions {
 
     VehicleOdometerPage vehicleOdometerPage = new VehicleOdometerPage();
     VehiclePageBasePage vehiclePageBasePage = new VehiclePageBasePage();
